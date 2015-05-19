@@ -1,0 +1,21 @@
+{
+  "name": "perspectives.org.au",
+  "version": "1.0.0",
+  "description": "The Persepectives Australian website",
+  "main": "index.js",
+  "scripts": {
+    "test": "."
+  },
+  "keywords": [
+    "mission",
+    "christian"
+  ],
+  "author": "Jonathon Choo",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-watch": "^4.2.4"
+  }
+}
