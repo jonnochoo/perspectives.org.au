@@ -1,0 +1,53 @@
+doctype //if lt IE 7
+html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='')  
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8(lang='')  
+//if IE 8
+  html.no-js.lt-ie9(lang='')  
+// [if gt IE 8] <!
+html.no-js(lang='')
+  // <![endif]
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title Perspectives
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    link(rel='stylesheet', href='css/normalize.min.css')
+    link(rel='stylesheet', href='css/foundation.min.css')
+    link(rel='stylesheet', href='css/app.css')
+  body
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+    |         
+    .container
+      header.row
+        .column.large-3
+          a(href="/")
+            img(src='img/logo.png', alt='Perspectives')
+
+        .column.large-9
+          nav.nav.right
+            ul
+              li
+                a(href='course') The Course
+              li
+                a(href='classes') Find A Class
+              li
+                a(href='testimonials') Testimonials
+              li
+                a(href='resources') Resources
+              li
+                a(href='contact') Contact Us
+      block content
+
+    footer.row
+      .column.large-12
+        hr
+        &copy; 2015 Perspectives on the World Christian Movement

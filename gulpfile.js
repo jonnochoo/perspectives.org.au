@@ -3,7 +3,7 @@ var notify = require("gulp-notify");
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 
-gulp.task('default', ['nodemon', 'sass-watch'])
+gulp.task('default', ['sass-watch'])
 
 gulp.task('sass-watch', function() {
   gulp.watch('scss/**/*.scss', ['sass']);
@@ -14,6 +14,5 @@ gulp.task('sass', function() {
     .pipe(sass({ 
       errLogToConsole: true
     }))
-    .pipe(gulp.dest('css/'));
-//    .pipe(notify("SASS recompiled"));
+    .pipe(gulp.dest('public/css/'));
 });

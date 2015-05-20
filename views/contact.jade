@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  .feature
+    .row
+      .column.large-12
+        h2 Contact Us
+
+  .row.content
+    .columns.large-12
+
+      form(id="contactForm", method="POST" action="/contact")
+        label Name
+        input(type="text", name="name", placeholder="Enter your name", value=data.name, required)
+
+        label Email Address
+        input(type="email", name="from", placeholder="Enter your email", value=data.from, required)
+
+        label Message
+        textarea(name="message", placeholder="Enter your message", required)=data.message
+
+        input(type="submit", value="Send").button.small
+
+block scripts
+  script(src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js")
+  script
+    $("form").validate();
