@@ -19,9 +19,13 @@ block content
         label Message
         textarea(name="message", placeholder="Enter your message", required)=data.message
 
-        input(type="submit", value="Send").button.small
+        div(class="g-recaptcha", data-sitekey="6LdFv24UAAAAACzwwwuRzbzK7zSZj4p-mUGMiY7d", data-callback="recaptchaCallback")
+        br
+        input(id="submit", type="submit", value="Send", disabled).button.small
 
 block scripts
-  script(src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js")
-  script
-    $("form").validate();
+  script.
+    function recaptchaCallback() {
+      $('#submit').removeAttr('disabled');
+      $('#submit').removeClass('disabledButton');
+    };
